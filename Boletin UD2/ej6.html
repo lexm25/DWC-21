@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+    /*Diseñar un algoritmo que tomando las coordenadas cartesianas de un punto en el plano y calcule e imprima 
+    el cuadrante al que pertenece dicho punto. También debe detectar cuando está en el origen o sobre un eje.*/
+    var teclado = "";
+    var x = parseInt(prompt("Introduce la coordenadas cartesiana x", teclado));
+    var y = parseInt(prompt("Introduce la coordenadas cartesiana y", teclado));
+    
+    if(x===0 && y===0){
+        document.write("Estás en el centro del eje");
+    }
+    else if(x===0 && y>0){
+        document.write("Estás sobre el eje y positivo");
+    }
+    else if(x===0 && y<0){
+        document.write("Estás sobre el eje y negativo");
+    }
+    else if(x>0 && y===0){
+        document.write("Estás sobre el eje x positivo");
+    }
+    else if(x<0 && y===0){
+        document.write("Estás sobre el eje x negativo");
+    }
+    else if(x>0 && y>0){
+        document.write("Estás en el primer cuadrante")
+    }
+    else if(x<0 && y>0){
+        document.write("Estás en el segundo cuadrante")
+    }
+    else if(x<0 && y<0){
+        document.write("Estás en el tercer cuadrante")
+    }
+    else if(x>0 && y<0){
+        document.write("Estás en el cuarto cuadrante")
+    }
+    </script>
+</body>
+</html>

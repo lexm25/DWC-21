@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        /*Realizar un algoritmo que permita introducir la nota de una asignatura por teclado, 
+        la valide para que esté comprendida entre 0 y 10 y se escriba en letras de la siguiente manera:
+        SUSPENSO si es menor que 5
+        APROBADO mayor que 5 y menor que 6
+        BIEN entre 6 y 7
+        NOTABLE entre 7 y 8
+        SOBRESALIENTE entre 9 y 10
+        */
+       do{       
+       var nota = prompt("Introduce la nota",nota);
+       if(nota>=0 && nota<5){
+            document.write("Su calificación de nota: ", nota, " es: SUSPENSO <br>");
+       }
+       else if(nota>=5 && nota<6){
+            document.write("Su calificación de nota: ", nota, "  es: APROBADO <br>");
+       }
+       else if(nota>=6 && nota<7){
+            document.write("Su calificación de nota: ", nota, "  es: BIEN <br>");
+       }
+       else if(nota>=7 && nota<=8){
+            document.write("Su calificación de nota: ", nota, "  es: NOTABLE");
+       }
+       else if(nota>=9 && nota<=10){
+            document.write("Su calificación de nota: ", nota, "  es: SOBRESALIENTE");
+       }
+       var respuesta = prompt("¿Quiere introducir otra nota? Escriba 'si' o 'no'",respuesta);
+    }while(respuesta == "si" || respuesta =="SI" || respuesta=="Si" || respuesta == "sI");
+    </script>
+</body>
+</html>

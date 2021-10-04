@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        /*Escriba un algoritmo que lea un instante de tiempo dado en horas y minutos y escriba como respuesta los mensajes 
+        “Buenos días” “Buenas tardes” “Buenas noches”, de acuerdo con las siguientes reglas:
+            a. Es de día desde las 7:30 hasta las 14:00 horas.
+            b. Es tarde desde las 14:01 hasta las horas 20:30.
+            c. Es noche desde las 20:31 hasta las horas 7:29.
+        */
+        var hora = prompt("Introduzca qué hora es: ", "formato 00:00");
+        hora = hora.replace(":","");
+        parseInt(hora);
+        if(isNaN(hora)){
+            alert("Introduzca una hora válida");
+        }
+        else{
+            if(hora>=730 && hora<=1400){
+                document.write("Buenos días");
+            }
+            else if(hora>=1401 && hora<=2030){
+                document.write("Buenas tardes");
+            }  
+            else{
+                document.write("Buenas noches");
+            }
+        }
+        
+    </script>
+</body>
+</html>

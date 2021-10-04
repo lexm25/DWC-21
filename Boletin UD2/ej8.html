@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        /*Diseñar un algoritmo para escribir en pantalla los n primeros números naturales, 
+        sus cuadrados, sus cubos y la suma de todos ellos.*/
+
+        var num = parseInt(prompt("Introduce el número"));
+        document.write("Primeros ", num," números naturales:<br>")
+        for(var i = 0;i<=num-1;i++){
+            document.write(i + "<br>");
+        }
+        document.write("Cuadrado de los primeros ", num," números naturales:<br>")
+        for(var i = 0;i<=num-1;i++){
+            document.write(Math.pow(i,2) + "<br>");
+        }
+        
+        var suma = 0;
+        for(var i = 0;i<num;i++){
+            suma = suma+i;
+            if(i >= num-1){
+                document.write("La suma de los primeros " + num + " números naturales es: " + suma);
+            }
+        }
+        
+    </script>
+</body>
+</html>

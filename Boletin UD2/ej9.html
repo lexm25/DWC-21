@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        /*Hallar el menor, el mayor y la media de un conjunto de números positivos leídos de teclado.*/
+        var num1 = parseInt(prompt("Introduce el primer número(sólo números positivos)"));
+        var num2 = parseInt(prompt("Introduce el segundo número(sólo números positivos)"));
+        var num3 = parseInt(prompt("Introduce el tercer número(sólo números positivos)"));
+        var num4 = parseInt(prompt("Introduce el cuarto númer(sólo números positivos)"));
+        if(num1<0 || num2<0 || num3<0 || num4<0){
+            alert("Sólo puedes introducir números positivos");
+            document.write("Error de ejecución, sólo se permiten números positivos");
+        }
+        else{
+            document.write("Los números introducidos son: <br>","Número1: ",num1,"<br>","Número2: ",num2,"<br>","Número2: ",num3,"<br>","Número2: ",num4,"<br>");
+            if(num1 > num2 && num1 > num3 && num1 > num4){
+                document.write("El número mayor es: " + num1,"<br>");
+            }
+            else if(num2 > num1 && num2 > num3 && num2 > num4){
+                document.write("El número mayor es: " + num2,"<br>");
+            }
+            else if(num3 > num1 && num3 > num2 && num3 > num4){
+                document.write("El número mayor es: " + num3,"<br>");
+            }
+            else if(num4 > num1 && num4 > num2 && num4> num3){
+                document.write("El número mayor es: " + num4,"<br>");
+            }
+            var media = (num1+num2+num3+num4)/4;
+            document.write("La media de los números es: ", media);
+        }
+        
+    </script>
+</body>
+</html>
