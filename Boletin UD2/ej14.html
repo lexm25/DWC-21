@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        /*Estamos interesados en calcular los ingresos medios de un conjunto de hombres y mujeres. 
+        Para ello disponemos de un documento donde se recoge si se trata de un hombre (H) o 
+        una mujer (M) y su sueldo correspondiente. 
+        La entrada de datos termina cuando se lee un * como sexo. Se validarán todas las entradas, 
+        el sexo será H o M y el sueldo entre los 1000 y 2000 euros independientemente de que el trabajador sea hombre o mujer.*/
+    
+        var sueldoH = 0;
+        var sueldoM = 0;
+        var totalH = 0;
+        var totalM = 0;
+        var contadorH = 0;
+        var contadorM = 0;
+        do {
+            var sexo = prompt("Introduzca su sexo 'H' para hombre y 'M' para mujer. Introduzca * para finalizar");
+            if(sexo == "*"){
+                break;
+            }
+            sueldo = parseInt(prompt("Introduzca su sueldo en euros: "));
+            if(sexo=="H"){
+                totalH += sueldo;
+                contadorH++;
+            }
+            else if(sexo =="M")
+                totalM += sueldo;
+                contadorM ++;
+        } while (sexo != "*");
+
+        document.write("La media de sueldo de los Hombres es: ", totalH / contadorH);
+        document.write("<br>");
+        document.write("La media de sueldo de las Mujeres es: ", totalM / contadorM);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
