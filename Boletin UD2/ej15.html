@@ -20,32 +20,32 @@
         var mon2 = 0;
         var mon1 = 0;
         do {
-            if (dinero>=1){
-                
-                resto += dinero - ((dinero % 1) * 1);
-
-                if(resto>= 0.5){
-                    resto += dinero - ((dinero % 0.5) * 0.5);
-                    
+            if(dinero>=2){
+                resto += dinero - ((dinero % 2) * 1);
+                if (dinero>=1){
+                    resto += dinero - ((dinero % 1) * 1);
+                    if(resto>= 0.5){
+                        resto += dinero - ((dinero % 0.5) * 0.5);
+                        if(resto >= 0.2){
+                            resto += dinero - ((dinero %0.2) * 0.2);
+                            if(resto >= 0.1){
+                                resto += dinero - ((dinero %0.1) * 0.1);
+                                if(resto >= 0.05){
+                                    resto += dinero - ((dinero %0.05) * 0.05);
+                                    if(resto >= 0.02){
+                                        resto += dinero - ((dinero %0.02) * 0.02);
+                                        if(resto >= 0.01){
+                                            resto += dinero - ((dinero %0.01) * 0.01);
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
-                if(resto >= 0.2){
-                    resto += dinero - ((dinero %0.2) * 0.2);
                 }
-                if(resto >= 0.1){
-                    resto += dinero - ((dinero %0.1) * 0.1);
-                }
-                if(resto >= 0.05){
-                    resto += dinero - ((dinero %0.05) * 0.05);
-                }
-                if(resto >= 0.02){
-                    resto += dinero - ((dinero %0.02) * 0.02);
-                }
-                if(resto >= 0.01){
-                    resto += dinero - ((dinero %0.01) * 0.01);
-                }
-
             }
         } while (resto =! 0);
+        document.write("el cambio es: ",mon100)
     </script>
 </body>
 </html>
