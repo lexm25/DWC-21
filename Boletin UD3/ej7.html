@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+    /*7. Leer de teclado una serie de nombres hasta que aparezca la palabra "ULTIMO". Contar
+    cuántos nombres se han leído, cuántos comienzan C y cuántos contienen la ñ.*/
+    var nombre = prompt("Introduce nombres: ", nombre);
+    var contadorC = 0;
+    var contador2 = 0;
+    if(nombre.charAt(0) == 'C'){
+        contadorC++;
+    }
+    else if(nombre.match("ñ")){
+        contador2++;
+    }
+    </script>
+</body>
+</html>
