@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+    /*Diseña un programa que indique el carácter más repetido dentro de una cadena de
+    caracteres.*/
+    var entrada = prompt("Introduce la cadena: ", entrada);
+    var aux = "";
+    document.write("La cadena tiene: ",entrada.length," palabras <br>");
+    for (let i = 0; i <= entrada.length; i++) {
+        if(entrada.charAt(0) == entrada.charAt(i)){
+            aux.concat(entrada.charAt(i));
+        }
+    }
+    </script>
+</body>
+</html>
