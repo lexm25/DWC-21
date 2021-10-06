@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        /*Diseñar un programa que, dada una cierta cantidad de dinero que se leerá desde la entrada estándar, 
+        calcule cuál es el número mínimo de monedas de curso legal que equivalen a dicha cantidad de dinero.*/
+        num500 = 0;
+    num200 = 0;
+    num100 = 0;
+    num50 = 0;
+    num20 = 0;
+    num10 = 0;
+    num5 = 0;
+    num2 = 0;
+    num1 = 0;
+    num05 = 0;
+    num02 = 0;
+    num01 = 0;
+    num005 = 0;
+    num002 = 0;
+    num001 = 0;
+    
+    precio = prompt("Introduce el precio del producto: ");
+    
+    if (precio >= 500) {
+    num500 = Math.floor(precio / 500);
+    precio = precio - num500 * 500;
+    }
+    if (precio >= 200) {
+    num200 = Math.floor(precio / 200);
+    precio = precio - num200 * 200;
+    }
+    if (precio >= 100) {
+    num100 = Math.floor(precio / 100);
+    precio = precio - num100 * 100;
+    }
+    if (precio >= 50) {
+    num50 = Math.floor(precio / 50);
+    precio = precio - num50 * 50;
+    }
+    if (precio >= 20) {
+    num20 = Math.floor(precio / 20);
+    precio = precio - num20 * 20;
+    }
+    if (precio >= 10) {
+    num10 = Math.floor(precio / 10);
+    precio = precio - num10 * 10;
+    }
+    if (precio >= 5) {
+    num5 = Math.floor(precio / 5);
+    precio = precio - num5 * 5;
+    }
+    if (precio >= 2) {
+    num2 = Math.floor(precio / 2);
+    precio = precio - num2 * 2;
+    }
+    if (precio >= 1) {
+    num1 = Math.floor(precio / 1);
+    precio = precio - num1 * 1;
+    }
+    if (precio >= 0.5) {
+    num05 = Math.floor(precio / 0.5);
+    precio = precio - num05 * 0.5;
+    }
+    if (precio >= 0.2) {
+    num02 = Math.floor(precio / 0.2);
+    precio = precio - num02 * 0.2;
+    }
+    if (precio >= 0.1) {
+    num01 = Math.floor(precio / 0.1);
+    precio = precio - num01 * 0.1;
+    }
+    if (precio >= 0.05) {
+    num005 = Math.floor(precio / 0.05);
+    precio = precio - num005 * 0.05;
+    }
+    if (precio >= 0.02) {
+    num002 = Math.floor(precio / 0.02);
+    precio = precio - num002 * 0.02;
+    }
+    if (precio >= 0.01) {
+    num001 = Math.floor(precio / 0.01);
+    precio = precio - num001 * 0.01;
+    }
+    alert(
+    "El numero de cada billete es el siguiente: " +
+    "\nNúmero de billetes de 500€: " +
+    num500 +
+    "\nNúmero de billetes de 200€: " +
+    num200 +
+    "\nNúmero de billetes de 100€: " +
+    num100 +
+    "\nNúmero de billetes de 50€: " +
+    num50 +
+    "\nNúmero de billetes de 20€: " +
+    num20 +
+    "\nNúmero de billetes de 10€: " +
+    num10 +
+    "\nNúmero de billetes de 5€: " +
+    num5 +
+    "\nNúmero de billetes de 2€: " +
+    num2 +
+    "\nNúmero de billetes de 1€: " +
+    num1 +
+    "\nNúmero de billetes de 0,5€: " +
+    num05 +
+    "\nNúmero de billetes de 0,2€: " +
+    num02 +
+    "\nNúmero de billetes de 0,1€: " +
+    num01 +
+    "\nNúmero de billetes de 0,05€: " +
+    num005 +
+    "\nNúmero de billetes de 0,02€: " +
+    num002 +
+    "\nNúmero de billetes de 0,01€: " +
+    num001   
+    );
+    </script>  
+</body>
+</html>
