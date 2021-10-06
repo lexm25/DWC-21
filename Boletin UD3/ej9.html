@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+    /*Leer un texto de la entrada estándar y contar cuántas palabras tiene, cuántas de ellas
+    empiezan por A y cuántas líneas tiene.
+    Suponemos que una palabra está separada de otra por uno o más espacios, un
+    tabulador o un salto de línea y el texto acaba con un punto, no existe ningún punto y
+    aparte y las palabras son todas correctas.*/
+    var entrada = prompt("Introduce la cadena: ", entrada);
+    document.write("Has introducido la cadena: ",entrada, "<br>");
+    var contador = 0;
+    var contadorEspacio = 1;
+    
+    for (let i = 0; i <= entrada.length; i++) {
+        if(entrada.charAt(i) == 'A'){
+            contador++;
+        }
+        else if(entrada.charAt(i)==" "){
+            contadorEspacio++;
+        }
+    }
+    document.write(contador," palabras empiezan por 'A' <br>");
+    document.write("La cadena tiene: ",contadorEspacio," palabras <br>");
+    </script>
+</body>
+</html>

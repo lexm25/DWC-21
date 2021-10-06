@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+    /*Hacer un script que pida el número de teléfono y en función del prefijo nos indique la
+    provincia, sólo para Andalucía). Si es otro indicar desconocido.*/
+    var telefono = prompt("Introduce el número de teléfono: ", telefono);
+    var aux = "";
+    document.write("Has introducido el número: ",telefono, "<br>");
+
+        for (let i = 0; i < 3; i++) {
+            aux= aux.concat(telefono.charAt(i));           
+        }
+        switch (aux) {
+            case "955": 
+                document.write("Prefijo perteneciente a Sevilla")
+                break;
+            case "954": 
+                document.write("Prefijo perteneciente a Sevilla")
+                break;
+            case "953":
+                document.write("Prefijo perteneciente a Jaén")
+                break;
+            case "853":
+                document.write("Prefijo perteneciente a Jaén")
+                break;
+            case "952":
+                document.write("Prefijo perteneciente a Málaga")
+                break;
+            case "951":
+                document.write("Prefijo perteneciente a Málaga")
+                break;
+            case "851":
+                document.write("Prefijo perteneciente a Málaga(Melilla)")
+                break;
+            case "956":
+                document.write("Prefijo perteneciente a Cádiz")
+                break;
+            case "856":
+                document.write("Prefijo perteneciente a Cádiz")
+                break;
+            case "950":
+                document.write("Prefijo perteneciente a Almería")
+                break;
+            case "850":
+                document.write("Prefijo perteneciente a Almería")
+                break;
+            case "957":
+                document.write("Prefijo perteneciente a Córdoba")
+                break;
+            case "857":
+                document.write("Prefijo perteneciente a Córdoba")
+                break;
+            case "958":
+                document.write("Prefijo perteneciente a Granada")
+                break;
+            case "858":
+                document.write("Prefijo perteneciente a Granada")
+                break;
+            case "959":
+                document.write("Prefijo perteneciente a Huelva")
+                break;
+            case "859":
+                document.write("Prefijo perteneciente a Huelva")
+                break;
+            default:
+                document.write("Prefijo desconocido");
+                break;
+        }
+    </script>
+</body>
+</html>

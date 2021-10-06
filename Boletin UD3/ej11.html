@@ -11,6 +11,11 @@
     /*Hacer un programa en el que el usuario que introduzca, nombre, profesión y edad
     separado por comas. Después el programa debe mostrar la edad del usuario por
     pantalla.*/
+    var identificacion = prompt("Introduzca su nombre, profesión y edad separados por comas: ", identificacion);
+    var aux = "";
+    const myArr = identificacion.split(",",3);
+    aux = myArr[2];
+    document.write("Su edad es: ", aux);
     </script>
 </body>
 </html>
