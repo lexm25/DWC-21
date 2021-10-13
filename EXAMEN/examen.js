@@ -36,7 +36,7 @@ while(true){
     else{
         document.write("Su imc es: ",imc," usted se encuentra en riesgo alto");
     }
-    prompt("¿Quiere realizar otro cálculo? 'si' para seguir, 'no' para salir", respuesta);
+    respuesta = prompt("¿Quiere realizar otro cálculo? 'si' para seguir, 'no' para salir", respuesta);
     if(respuesta=="no"){
         break;
     }
