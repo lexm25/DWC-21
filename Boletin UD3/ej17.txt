@@ -1,8 +1,0 @@
-1. Recorro la cadena 
-2. Saco el primer carácter
-3. Busco el número de coincidencias 
-de ese carácter (máximo)
-4. eliminar ese carácter para que no 
-lo cuente otra vez
-5. Comparar si es el carácter con más 
-coincidencias máximo

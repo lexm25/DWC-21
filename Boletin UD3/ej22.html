@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+    /*22. Realiza un algoritmo que solicite del usuario un tiempo dado en segundos y calcule y
+    presente en pantalla dicho tiempo pero expresado en horas, minutos y segundos.*/
+    var pedir = prompt("Introduce la cantidad de tiempo en segundos");
+    var tiempo = new Date(0,0,0,0,0,pedir,0);
+    var horas = tiempo.getHours;
+    
+    document.write("Has introducido: ",horas," horas", tiempo.getMinutes," minutos y ", tiempo.getSeconds);    
+    </script>
+</body>
+</html>
