@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+    /*4. Generar aleatoriamente una quiniela de n columnas. Supóngase que las probabilidades son:
+        ➔ 50% para que salga 1
+        ➔ 30% para que salga x
+        ➔ 20% para que salga 2
+        
+        números del 1 al 10
+        del 1 al 5 es 1
+        del 6 al 8 es x
+        y del 9 al 10 es 2*/
+        while(contador!=14){
+        var numAleatorio = (Math.random() * (10 - 1) + 1)+1;
+            if(numAleatorio==0 || numAleatorio<5){
+                document.write("1");
+                document.write("<br>");
+            }
+            else if(numAleatorio==5 || numAleatorio<8){
+                document.write("x");
+                document.write("<br>");
+            }
+            else{
+                document.write("2");
+                document.write("<br>");
+            }
+            contador++;
+        }
+    </script>
+</body>
+</html>

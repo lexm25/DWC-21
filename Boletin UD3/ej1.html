@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+    /*1. Hacer un programa que muestre un menú de opciones con las siguientes operaciones
+    posibles:
+        ● Redondeo a su inmediato superior de un número
+        ● Redondeo a su inmediato inferior de un número
+        ● Redondeo al número más cercano
+        ● Cálculo del número máximo entre dos dados
+        ● Cálculo del número mínimo entre dos dados
+        ● Cálculo de un número elevado a otro
+        ● Cálculo de la raíz cuadrada de un número*/
+        
+        var respuesta = 0;
+        var num = 0;
+        var num2 = 0;
+        var resultado = 0;
+
+        while(true){
+            var respuesta = parseInt(prompt("Pulse 1 para: Redondeo a su inmediato superior de un número \nPulse 2 para: Redondeo a su inmediato inferior de un número \nPulse 3 para: Redondeo al número más cercano \nPulse 4 Cálculo del número máximo entre dos dados \nPulse 5 para: Cálculo del número mínimo entre dos dados \nPulse 6 para: Cálculo de un número elevado a otro \nPulse 7 para: Cálculo de la raíz cuadrada de un número \n\n PULSE 0 PARA SALIR DEL PROGRAMA"));
+            if(respuesta == 0){
+                break;
+            }
+            else if(respuesta==1){
+                var num = prompt("Introduce un número: ");
+                resultado = Math.ceil(num);
+                document.write("El número: ", num1, " redondeado hacia arriba es: ", resultado);
+            }
+            else if(respuesta==2){
+                var num = prompt("Introduce un número: ");
+                Math.floor(num);
+                document.write("El número: ", num1, " redondeado hacia abajo es: ", resultado);
+            }
+            else if(respuesta==3){
+                var num = prompt("Introduce un número: ");
+                resultado = Math.round;
+                document.write("El número: ", num1, " redondeado es: ", resultado);
+            }
+            else if(respuesta==4){
+                var num = prompt("Introduce un número: ");
+                var num2 = prompt("Introduce un número: ");
+                resultado = Math.max(num,num2);
+                document.write("El máximo número entre: ", num1," y ",num2, " es: ", resultado);
+            }
+            else if(respuesta==5){
+                var num = prompt("Introduce un número: ");
+                var num2 = prompt("Introduce un número: ");
+                resultado = Math.min(num,num2);
+                document.write("El mínimo número entre: ", num1," y ",num2, " es: ", resultado);
+            }
+            else if(respuesta==6){
+                var num = prompt("Introduce un número: ");
+                var num2 = prompt("Introduce el exponente: ");
+                resultado = Math.pow(num,num2)
+                document.write("El resultado de: ",num," elevado a ",num2," es: ",resultado);
+            }
+            else if(respuesta==7){
+                var num = prompt("Introduce un número: ");
+                resultado = Math.sqrt(num);
+            }
+            else{
+                alert("Debe introducir un número");
+                continue;
+            }
+        }
+    </script>
+</body>
+</html>

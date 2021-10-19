@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*Crea un programa que solicite un correo electrónico y compruebe mediante funciones:
+            a) Comprobar que el nombre de usuario contiene al menos tres letras. Si no es así, debe
+            aparecer un mensaje por pantalla indicando que el texto no cumple tener al menos tres
+            letras. Debe aparecer el mensaje: “El nombre no cumple tener al menos tres letras”.
+            b) Comprobar que el correo electrónico contiene el carácter @ (arroba) y el carácter .
+            (punto). De no ser así, deberá aparecer un mensaje indicando que al correo electrónico
+            le falta uno o ambos caracteres. Por ejemplo si el correo es pacogmail.com deberá
+            aparecer el mensaje: “Falta el símbolo @ en el correo electrónico”.
+            c) Antes de enviarse los datos del formulario a la página de destino, si el correo
+            electrónico contiene la subcadena “ at “ debe reemplazarse por el símbolo @. Por
+            ejemplo si se ha escrito paco at gmail.com debe cambiarse a paco@gmail.com*/
+        var email = "";
+        email = prompt("Introduce tu e-mail ", email);
+        let expReg = /\w{3,}@{1}\w+\.{1}\w{2,3}$/;
+        var contadorArroba = 0;
+        var contadorPunto = 0;
+        if(email!=expReg){
+            alert("El nombre no cumple tener al menos tres letras");
+        }
+        else{
+            for (let i = 0; i <= email.length; i++) {
+                if(email.charAt(i)=='@'){
+                    contadorArroba++;
+                }
+                else if(email.charAt(i)=='.'){
+                    contadorPunto++;
+                }
+                else if(email.charAt(i)=='a' && email.charAt((i+1)=='t')){
+                    email.replace('at','@');
+                    echo(email);
+                }
+            }
+            if(contadorArroba==0){
+                alert("Falta el símbolo '@' en el correo electrónico");
+            }
+            else if(contadorPunto == 0){
+                    alert("Falta el símbolo '.' en el correo electrónico");
+                }
+        }
+    </script>
+</body>
+</html>
