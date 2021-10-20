@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+    /*23. Calcular de un conjunto de fechas la menor, la mayor y la diferencia en segundos entre
+    ambas.*/
+
+    var fechaActual = Date.now();
+    var fecha1 = prompt("Introduzca la primera fecha con formato dd/mm/yyyy");
+    // var fecha2 = prompt("Introduzca la primera fecha con formato dd/mm/yyyy");
+    
+    fecha1 = fecha1.split("/");
+    // fecha2 = fecha2.split("/");
+
+    var fechaAux;
+    var fecha2Aux;
+    fechaAux = new Date(fecha1[2],(fecha1[1]-1),fecha1[0]);
+    // fecha2Aux = new Date(fecha2[2],(fecha2[1]-1),fecha2[0]);
+
+    document.write(fechaAux.getDay(),fechaAux.getMonth(),fechaAux.getFullYear(),fechaAux.getHours());
+    </script>
+</body>
+</html>

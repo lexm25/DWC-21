@@ -11,10 +11,10 @@
     /*22. Realiza un algoritmo que solicite del usuario un tiempo dado en segundos y calcule y
     presente en pantalla dicho tiempo pero expresado en horas, minutos y segundos.*/
     var pedir = prompt("Introduce la cantidad de tiempo en segundos");
-    var tiempo = new Date(0,0,0,0,0,pedir,0);
-    var horas = tiempo.getHours;
-    
-    document.write("Has introducido: ",horas," horas", tiempo.getMinutes," minutos y ", tiempo.getSeconds);    
+    var pedirMili = pedir * 1000;
+    var tiempo = new Date(pedirMili);
+
+    document.write("Has introducido: ",tiempo.getHours()," horas", tiempo.getMinutes()," minutos y ", tiempo.getSeconds());    
     </script>
 </body>
 </html>
