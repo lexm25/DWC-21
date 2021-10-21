@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ejercicio29</title>
+	<script type="text/javascript">
+    /*29. Crear dos enlaces, uno para abrir una nueva ventana y uno para cerrarla. La nueva
+    ventana mostrará este mensaje en una fuente grande : El ojo es la ventana a tu alma.
+    La nueva ventana se coloca en la esquina izquierda de la pantalla , será
+    redimensionable , tendrá una barra de desplazamiento, y estará en primer plano.*/
+	function inicializar(){
+		document.getElementById("crear-ventana").onclick=crearNueva;
+		document.getElementById("cerrar-ventana").onclick=cerrarNueva;
+	}
+	var nuevaVentana;
+	function crearNueva(){
+		nuevaVentana = window.open("","","height=400,width=800");
+        nuevaVentana.document.write("El ojo es la ventana a tu alma.");
+	}
+	function cerrarNueva(){
+		if (nuevaVentana){
+			nuevaVentana.close(); nuevaVentana = null;
+		}
+	}
+	</script>
+</head>
+<body onLoad="inicializar()">
+	<h1>Abrimos y cerramos ventanas</h1>
+	<form>
+		<p> 
+        <a id="crear-ventana" href="" >Crear ventana</a>
+		<a id="cerrar-ventana" onclick="cerrarNueva();" href="">Cerrar ventana</a></p>
+	</form>
+</body>
+</html>
