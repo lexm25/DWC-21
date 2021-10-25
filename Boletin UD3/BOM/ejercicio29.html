@@ -9,7 +9,6 @@
     redimensionable , tendrá una barra de desplazamiento, y estará en primer plano.*/
 	function inicializar(){
 		document.getElementById("crear-ventana").onclick=crearNueva;
-		document.getElementById("cerrar-ventana").onclick=cerrarNueva;
 	}
 	var nuevaVentana;
 	function crearNueva(){
@@ -17,9 +16,7 @@
         nuevaVentana.document.write("El ojo es la ventana a tu alma.");
 	}
 	function cerrarNueva(){
-		if (nuevaVentana){
-			nuevaVentana.close(); nuevaVentana = null;
-		}
+		nuevaVentana.close();
 	}
 	</script>
 </head>
@@ -27,8 +24,8 @@
 	<h1>Abrimos y cerramos ventanas</h1>
 	<form>
 		<p> 
-        <a id="crear-ventana" href="" >Crear ventana</a>
-		<a id="cerrar-ventana" onclick="cerrarNueva();" href="">Cerrar ventana</a></p>
+        <a id="crear-ventana" href="#" >Crear ventana</a>
+		<a id="cerrar-ventana" onclick=cerrarNueva();return false; href="#">Cerrar ventana</a></p>
 	</form>
 </body>
 </html>

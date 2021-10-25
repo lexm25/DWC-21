@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+
+    <head>
+        <title>Ejercicio 1</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            var ventana;
+            function abrir(){
+                if(ventana==null){
+                    ventana = window.open("","","scrollbars=1,height=2,width=2");
+                    ventana.document.write("El ojo es la ventana de tu alma");
+                }
+            }
+
+            function cerrar(){
+                ventana.close();
+                ventana=null;
+            }
+        </script>
+
+        <a onclick="abrir();return false;" href="#">abrir</a>
+        <a onclick="cerrar();return false;" href="#">cerrar</a>
+    </body>
+
+</html> 
