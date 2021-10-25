@@ -9,11 +9,15 @@
         /*Crear un programa que va a crear un reloj digital en el título. Utilice el método
         setInterval() para actualizar la barra de estado una vez cada minuto con la hora actual.*/
         var myVar = setInterval(myTimer, 1000);
+        var myVar2 = setTimeout(myStopFunction, 5000);
 
         function myTimer() {
             var d = new Date();
             var t = d.toLocaleTimeString();
             document.getElementById("demo").innerHTML = t;
+        }
+        function myStopFunction() {
+            clearInterval(myVar);
         }
         //document.title = t;  messirve
 
@@ -24,10 +28,5 @@
     <p id="demo"></p>
 
     <button onclick="myStopFunction()">Stop time</button>
-    <script>
-        function myStopFunction() {
-            clearInterval(myVar);
-        }
-    </script>
 </body>
 </html>
