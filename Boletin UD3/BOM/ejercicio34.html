@@ -6,32 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title id="furbo"></title>
     <script>
-    
-    
-    document.getElementById("furbo").innerHTML = aux;
-    furbo = "FURBOOOO";
-    for (let i = 0; i < 3; i++) {
-        aux= aux.concat(furbo.charAt(i));           
-        document.write(aux);
-    }
+        /*34. Crear un programa en cuya barra de estado y título del documento aparezca el
+        siguiente texto animado circularmente (ver Ejemplo de texto animado circularmente):
+        
+                        ¡¡Sólo quedan 20 días de ofertas!!*/
+        var position = 0;
+        var texto = "¡¡Sólo quedan 20 días de ofertas!!";
+        setInterval(mostrar,150);
+        function mostrar(){
+            position++;
+            if(position>=texto.length){
+                position=0;
+            }
+            window.document.title = texto.substring(position)+" "+texto+" "+texto;
+        }
+       /*var position = 0;
+        var texto = "¡¡Sólo quedan 20 días de ofertas!!";
+        function mostrar(){
+            position++;
+            if(position>=texto.length){
+                position=0;
+            }
+            window.document.title = texto.substring(position)+" "+texto+" "+texto;
+            setTimeout(mostrar,150);
+        }*/
     </script>
     
 </head>
 <body>
-    <script>
-    /*34. Crear un programa en cuya barra de estado y título del documento aparezca el
-    siguiente texto animado circularmente (ver Ejemplo de texto animado circularmente):
-        
-                        ¡¡Sólo quedan 20 días de ofertas!!*/
-    
 
-    // function pereza(){
-    //     for (let i = 0; i < 3; i++) {
-    //         aux= aux.concat(telefono.charAt(i));           
-    //         document.write(aux);
-    //     }
-    // }
-                        
-    </script>
 </body>
 </html>

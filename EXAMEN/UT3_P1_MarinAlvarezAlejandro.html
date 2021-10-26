@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+    var nombre = "";
+    let expReg = /^@?\w{7}[0-9]{3}$/;
+    let expFin = /fin$/i;
+    var aux = "";
+    var auxiliar ="";
+
+    while (true) {
+        nombre = prompt("Introduzca el nombre de usuario empezando por @ seguido de 7 carácteres y 3 dígitos al final");
+        if(expFin.test(nombre)){
+            alert("ha finalizado el programa");
+            break;
+        }
+        else{
+            if(expReg.test(nombre)){
+                    if(nombre.charAt(0) != '@'){
+                        aux += "@" + nombre;
+                    }
+            }
+            var nombre1 =aux.substring(0,2);
+            var nombre2 =aux.substring(2,8);
+            var nombre3 =aux.substring(8);
+            var nombrefinal= nombre1 + "_" + nombre2 + "_" + nombre3;
+            aux = "";
+            auxiliar += nombrefinal + auxiliar + "<br>";
+        }
+        var ventana;
+        //document.write(nombrefinal,"<br>");
+        
+    }
+    if(auxiliar == ""){
+        alert("No se abre ventana porque está vacía");
+    }else{
+        ventana = window.open("","","scrollbars=1,height=2,width=2");
+        ventana.document.write(auxiliar);
+        
+    }
+    
+</script>
+</body>
+</html>
