@@ -40,9 +40,13 @@
     if(auxiliar == ""){
         alert("No se abre ventana porque está vacía");
     }else{
-        ventana = window.open("","","scrollbars=1,height=2,width=2");
+        ventana = window.open("","","scrollbars=1,height=1,width=1");
         ventana.document.write(auxiliar);
         
+        setTimeout(cerrar,5000);
+        function cerrar(){
+            ventana.close();
+        }
     }
     
 </script>
