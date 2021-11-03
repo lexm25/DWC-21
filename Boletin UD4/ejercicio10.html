@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        /*a)Escribe una función llamada elMenor que acepte un número variable de parámetros y devuelva el parámetro de menor valor pasado a la función.*/
+        var elMenor;
+        elMenor = (...param) => {
+            console.log(Math.min(...param));
+        };
+        elMenor(2,3,4,5,6);
+        /*b)Escribe una función llamada colocaEnMedio que acepte como parámetros dos arrays y devuelva el primer array con todos los valores del segundo array colocados en el centro del primer array.*/
+        var colocaEnMedio;
+        // var array1 = [];
+        // var array2 = [];
+        // var aux = [];
+   
+        // colocaEnMedio = (array1, array2) => {
+        //     aux = array1.slice(0,Math.trunc(array1.length/2));
+        //     console.log(aux);
+        //     aux = aux.concat(array2);
+        //     console.log(aux);
+        //     array1 = array1.slice(Math.trunc(array1.length/2),array1.length);
+        //     aux = aux.concat(array1);
+        //     console.log(aux);
+        // };
+        // colocaEnMedio(array1,array2);
+
+        colocaEnMedio = () => {
+            mitad = Math.trunc(array1.length/2);
+            array1.splice(mitad, 0, array2);
+            return document.write(array1);
+        };
+        array1 = [1,2,3,4,5];
+        array2 = ["a","b","c","d","e"];
+        //colocaEnMedio(array1,array2);
+        
+        
+        /*c)Escribe una función llamada uneArrays que acepte un número variable de parámetros (cada uno de ellos será un array) y devuelva un nuevo array con todos los parámetros concatenados.*/
+        var arrayTodos = [];
+        var uneArrays = (...params) => {
+            arrayTodos = arrayTodos.concat(...params);
+            console.log(arrayTodos);
+        }
+        array3=["Antonio","Pepe","Manuel"];
+        uneArrays(array1,array2,array3);
+        /*d)Escribe una función llamada sumaArgPares que sume todos los argumentos pares que se pasen a la función.*/
+        var sumaArgPares;
+        var resultado = 0;
+        sumaArgPares = (...numeros) => {
+            for(let i = 0; i < numeros.length;i++){ 
+                if(numeros[i]%2==0){
+                resultado += numeros[i];
+                }
+            }
+            console.log(resultado);
+        };
+        sumaArgPares(1,2,3,4,5,6);
+
+    </script>
+</body>
+</html>

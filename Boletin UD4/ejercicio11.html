@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Refactoriza el siguiente código usando funciones flecha. Asegúrate de que la función se llama tripleAndFilter.
+        
+        function tripleAndFilter(arr){
+                return arr.map(function(value){
+                        return value * 3;
+                    }).filter(function(value){
+                    return value % 5 === 0;
+                })
+        }
+        //Asegúrate de que la función se llama doubleOddNumbers.
+        function doubleOddNumbers(arr){
+            return arr.filter(function(val){
+                return val % 2 !== 0;
+            }).map(function(val){
+                return val *2;
+            })
+        }
+ 
+        //Asegúrate de que la función se llama bar
+        function bar(){ 
+            let txt = ''; 
+            for(let i in arguments){ 
+                txt += arguments[i];
+            } 
+            return txt;
+        }
+    </script>
+</body>
+</html>
