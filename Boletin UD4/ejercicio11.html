@@ -8,8 +8,9 @@
 </head>
 <body>
     <script>
-        //Refactoriza el siguiente código usando funciones flecha. Asegúrate de que la función se llama tripleAndFilter.
-        
+        array = [1,2,3,4,5];
+        array2 = ["antonio","manuel"]
+        //a.Refactoriza el siguiente código usando funciones flecha. Asegúrate de que la función se llama tripleAndFilter.
         function tripleAndFilter(arr){
                 return arr.map(function(value){
                         return value * 3;
@@ -17,7 +18,11 @@
                     return value % 5 === 0;
                 })
         }
-        //Asegúrate de que la función se llama doubleOddNumbers.
+        var tripleAndFilter = (arr) =>{
+            return arr.map((value) => value * 3).filter((value) => value % 5 === 0);
+        };
+        console.log(tripleAndFilter(array));
+        //b.Asegúrate de que la función se llama doubleOddNumbers.
         function doubleOddNumbers(arr){
             return arr.filter(function(val){
                 return val % 2 !== 0;
@@ -25,8 +30,11 @@
                 return val *2;
             })
         }
- 
-        //Asegúrate de que la función se llama bar
+        var doubleOddNumbers = (arr) => {
+            return arr.filter((val) => val % 2 !== 0).map((val) => val *2);
+        };
+        console.log(doubleOddNumbers(array));
+        //c.Asegúrate de que la función se llama bar
         function bar(){ 
             let txt = ''; 
             for(let i in arguments){ 
@@ -34,6 +42,32 @@
             } 
             return txt;
         }
+        var bar = (arr) => {
+            let txt = ''; 
+            for(let i in arr){ 
+                txt += arr[i];
+            } 
+            return txt;
+        };
+        
+        console.log(bar(array2));
+        //d.Observando los ejemplos anteriores, repite el ejercicio 10.d, utilizando la programación funcional
+        var sumaArgPares;
+        var resultado = 0;
+        sumaArgPares = (...numeros) => {
+            for(let i = 0; i < numeros.length;i++){ 
+                if(numeros[i]%2==0){
+                resultado += numeros[i];
+                }
+            }
+            console.log(resultado);
+        };
+
+        var sumaArgParesFuncional = (numeros) =>{
+            return numeros.filter((numeros) => numeros.reduce(sumaArgParesFuncional)%2==0).map((numeros) => resultado += numeros[i]);
+        };
+        sumaArgParesFuncional(array);
+
     </script>
 </body>
 </html>
