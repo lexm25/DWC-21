@@ -9,9 +9,10 @@
 <body>
     <script>
         /*Realizar una función que rellene un matriz de orden N de número aleatorios.*/
-        var rellenaMatriz = (orden) => {
-            
-        };
+        //crear un array vacío lo recorro para que en cada posicion del array vacío le meto un array con la siguiente expresión:
+        var randomNum = Array.from({length: 5}, () => Math.floor(Math.random() * 10));
+        
+        console.log(randomNum);
     </script>
 </body>
 </html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    /*Hacer un programa en el que el usuario que introduzca, nombre, apellidos, DNI y fecha de nacimiento separado por comas. Esta entrada de datos se repetirá hasta que el usuario introduzca la cadena vacía. El programa debe guardar los datos en un array bidimensional.*/
+    //antonio,eslava,1234g,10-10-2010
+    var array = [];
+    var arrayBidimensional = [];
+    do{
+        var datos = prompt("Introduce nombre, apellidos, DNI y fecha de nacimiento separado por comas");
+        if(!datos == ""){
+            array = datos.split(",");
+            arrayBidimensional.push(array);
+        }
+    }while(datos != "");
+    console.log(arrayBidimensional);
+    </script>
+</body>
+</html>

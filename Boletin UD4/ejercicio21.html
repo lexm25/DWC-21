@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*Implementar funciones para el ejercicio anterior para imprimir los datos y para buscar una persona por apellidos, por DNI o por edad. ¿cómo podríamos optimizar la búsqueda? */
+        //antonio,eslava,1234g,10-10-2010
+        var array = [];
+        var arrayBidimensional = [];
+        do{
+            var datos = prompt("Introduce nombre, apellidos, DNI y fecha de nacimiento separado por comas");
+            if(!datos == ""){
+                array = datos.split(",");
+                arrayBidimensional.push(array);
+            }
+        }while(datos != "");
+
+        var seleccion = prompt("Introduce el apellido,dni o edad a buscar");
+
+        var mostrarDatos = (array) =>{
+                array.forEach(linea => {
+                linea.forEach(dato => {
+                    document.write(dato + " ");
+                });
+                document.write("<br>")
+            });
+        }
+        var buscarApellidos = (array, seleccion) => {
+            var encontrado = false;
+            array.forEach(linea => {
+                linea.forEach(dato => {
+                    if (dato == seleccion){
+                        document.write(linea + " ");
+                        encontrado = true;
+                    }
+                });
+            })
+            if(!encontrado){
+                        document.write("No se ha encontrado el dato");
+            }
+        }
+
+        // mostrarDatos(arrayBidimensional);
+        buscarApellidos(arrayBidimensional,seleccion);
+    </script>
+</body>
+</html>
