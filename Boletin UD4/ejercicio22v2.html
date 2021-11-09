@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*Añade al ejercicio anterior las siguientes funciones, utiliza además las funciones creadas anteriormente (utiliza los métodos ya implementados de Array y funciones flecha):
+        mayorEdad: filtrará del array los usuarios mayores de edad e imprimirá sus datos en una nueva ventana.
+        menorEdad: filtrará del array los usuarios menores de edad e imprimirá en una nueva ventana los días y/o años que le quedan para su mayoría de edad.
+        modificaDatos: solicitará qué datos modificar, el dato por el que se va a modificar y el dni del usuario.
+        eliminaUsuario: elimina un usuario del array solicitando su dni. Además solicita confirmación antes de eliminar.*/
+        //antonio,eslava,1234g,10-10-2010
+        //jose,martin,54723x,16-06-1996
+        var array = [];
+        var arrayBidimensional = [];
+        do{
+            var datos = prompt("Introduce nombre, apellidos, DNI y fecha de nacimiento (con formato dd-mm-yyyy)");
+            if(!datos == ""){
+                array = datos.split(",");
+                arrayBidimensional.push(array);
+            }
+        }while(datos != "");
+
+        let expReg = /^[0-9]{2}\-{1}[0-9]{2}\-{1}[0-9]{4}/;
+        var datos = [];
+
+        /*  function calcularEdad(birthday) {
+            var birthday_arr = birthday.split("-");
+            var birthday_date = new Date(birthday_arr[2], birthday_arr[1] - 1, birthday_arr[0]);
+            var ageDifMs = Date.now() - birthday_date.getTime();
+            var ageDate = new Date(ageDifMs);
+            return Math.abs(ageDate.getUTCFullYear() - 1970);
+        }  */
+        
+        var calcularEdad = (array) => {
+            var contador = 0;
+            array.forEach(linea => {
+                linea.forEach(dato => {
+                    if(expReg.test(dato)){
+                        var arrayFecha = dato.split("-");
+                        var birthday_date = new Date(arrayFecha[2], arrayFecha[1] - 1, arrayFecha[0]);
+                        var ageDifMs = Date.now() - birthday_date.getTime();
+                        var ageDate = new Date(ageDifMs);
+                        var resultado = Math.abs(ageDate.getUTCFullYear() - 1970);
+                        return resultado;
+                    }
+                })
+            })
+        };
+
+
+        var edadCl = calcularEdad(arrayBidimensional);
+        document.write(edadCl);
+
+        /* var mayorEdad = (array) => {
+            array.forEach(linea => {
+                linea.forEach(dato => {
+                    if (calcularEdad(array) > 18){
+                        ventana = window.open("","","scrollbars=1,height=1,width=1");
+                        ventana.document.write(linea + " ");
+                        setTimeout(cerrar,5000);
+                        function cerrar(){
+                            ventana.close();
+                        }  
+                    }
+                });
+            })
+        }; */
+
+        var menorEdad = () => {
+
+        };
+
+        var modificaDatos = () => {
+
+        };
+
+        var eliminaUsuario = () => {
+
+        }
+
+    </script>
+</body>
+</html>
