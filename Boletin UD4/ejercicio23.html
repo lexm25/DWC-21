@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*Utiliza un modulos almacenar información sobre módulos impartidos en el IES de la siguiente manera:  
+        ("DWECL", "Desarrollo Web en Entorno Cliente"). Añade la información con posterioridad a la creación de la estructura.
+        */
+
+        const modulos = new Map();
+
+        modulos.set("DWECL", "Desarrollo Web en Entorno Cliente");
+        modulos.set("DWES", "Desarrollo Web en Entorno Servidor");
+        modulos.set("DIW", "Diseño de Interfaces Web");
+        modulos.set("DAW", "Despligue de Aplicaciones Web");
+        modulos.set("EIE", "Empresa e Inicativa Emprendedora");
+        
+        //Muestra cuántos módulos hay almacenados
+        console.log("Hay: " + modulos.size + " módulos almacenados");
+        //Muestra el contenido de la estructura
+        for (let [key, value] of modulos) {
+            console.log(key + '=' + value);
+        }
+        //Devuelve las abreviaturas de todos los módulos guardados
+        for (let [key, value] of modulos) {
+            console.log(key);
+        }
+        //Devuelve el nombre completo de todos los módulos
+        for (let [key, value] of modulos) {
+            console.log(value);
+        }
+        //Consulta si está el módulo "DAW"; Si está, elimínalo.
+        console.log(modulos.has("DAW"));
+        
+        if(modulos.has("DAW")){
+            modulos.delete("DAW");
+        }
+        for (let [key, value] of modulos) {
+            console.log(value);
+        }
+    
+        //Ordena alfabéticamente el modulos según las abreviaturas de los módulos
+        var arrayObj=Array.from(modulos);
+        arrayObj.sort(function(a,b){return a[1]-b[1]});
+        for (let [key, value] of modulos) {
+            console.log(key + '=' + value);
+        }
+    </script>
+</body>
+</html>
