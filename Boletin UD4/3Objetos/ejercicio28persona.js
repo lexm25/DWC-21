@@ -6,7 +6,7 @@ class Persona {
         this.dni = dni;
         this.fecha = fecha;
     }
-    imprimeDatos(){
+    imprime(){
        document.write("Nombre: " + this.nombre + " Apellido: " + this.apellido + " DNI: " + this.dni + " Fecha Nacimiento: " + this.fecha);
     }
 }
