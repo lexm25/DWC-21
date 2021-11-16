@@ -17,10 +17,11 @@
 
     var alumno2 = new Alumno("Ruben","Castellano","36847f","10-12-1993","2º DAW", notas2);
 
-    var datos = [alumno1,alumno2];
-    var aula = new Aula(datos);
+    var alumnos = [alumno1,alumno2];
+    var aula = new Aula(alumnos);
 
     // aula.imprimeAlumnos();
-    // var encontrado = aula.buscarAlumno("23423g");
-    // encontrado.imprime();
-    console.log(aula.ordenarPorNota(alumno1));
+    var encontrado = aula.buscarAlumno("23423g");
+    
+    console.log(aula.ordenarPorNota("23423g"));
+    console.log(aula.ordenarPorApellido());

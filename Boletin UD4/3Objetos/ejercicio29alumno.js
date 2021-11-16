@@ -11,7 +11,7 @@ class Alumno extends Persona{
         document.write(" Curso: " + this.curso) 
         document.write("<br>");
         for (const [clave,valor] of this.notas) {
-            document.write("Nota del módulo: " + clave + ": " + valor + "<br>");    
+            document.write("Nota del módulo " + clave + ": " + valor + "<br>");    
         }
     }
     
