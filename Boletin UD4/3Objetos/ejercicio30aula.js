@@ -23,7 +23,7 @@ class Aula{
         //Cogemos el primer elemento ya que devuelve el objeto alumno
         return this.alumnos.filter((alumno) => alumno.dni == dni)[0];
         
-        //la función find te devuelve directamente la primera posicion
+        //la función find te devuelve directamente el valor
         //return this.alumnos.find((alumno) => alumno.dni == dni);
     }
 
