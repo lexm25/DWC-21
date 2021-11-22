@@ -10,12 +10,10 @@ A. Tiempos.
 B. Nombre de piloto. 
 
 Añade una función para añadir al array una sesión de calificación nueva, en caso de que no exista una sesión para ese piloto y en caso de exista, si el tiempo el nuevo tiempo es menor, se modificará el tiempo en la sesión que ya existe en el array  y otra para eliminar del array (hay que comprobar que existe, crea una función para ello).
-Crea un archivo para la clase Piloto y otro para la clase SesionCalificacion
-*/
+Crea un archivo para la clase Piloto y otro para la clase SesionCalificacion*/
 class Piloto{
        constructor(nombre,escuderia){
               this.nombre = nombre;
               this.escuderia = escuderia;
        }
-
 }

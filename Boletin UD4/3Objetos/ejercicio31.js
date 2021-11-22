@@ -17,6 +17,19 @@ function anadirPiloto(sesionCalificacion,piloto,tiempo) {
     sesionCalificacion.push([piloto,tiempo]);
 }
 
+function nuevaCalificacion(arrayCalificaciones, piloto, tiempo) {
+  var index = arrayCalificaciones.findIndex((sesion) => sesion[0].nombre == piloto.nombre);
+
+  if (index != -1) {
+    if (arrayCalificaciones[index][1] > tiempo) {
+      arrayCalificaciones[index][1] = tiempo;
+    }
+  } else {
+    arrayCalificaciones.push([piloto, tiempo]);
+  }
+  return arrayCalificaciones;
+}
+
 function ordenarTiempo(arrayCalificaciones) {
     return arrayCalificaciones.sort(function (a,b) {
         if (a[1] > b[1]) {
@@ -37,19 +50,6 @@ function ordenarNombre(arrayCalificaciones) {
         } 
         return 0;
       });
-}
-
-function nuevaCalificacion(arrayCalificaciones, piloto, tiempo) {
-  var index = arrayCalificaciones.findIndex((sesion) => sesion[0].nombre == piloto.nombre);
-
-  if (index != -1) {
-    if (arrayCalificaciones[index][1] > tiempo) {
-      arrayCalificaciones[index][1] = tiempo;
-    }
-  } else {
-    arrayCalificaciones.push([piloto, tiempo]);
-  }
-  return arrayCalificaciones;
 }
 
 function eliminarCalificacion(arrayCalificaciones, nombre) {
