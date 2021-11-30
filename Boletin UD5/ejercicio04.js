@@ -9,19 +9,19 @@ function inicializar() {
 }
 
 function corregir(e) {
-    if (e.currentTarget.name=="fav_language") {
+    if (e.currentTarget.name=='lenguaje') {
         divP1 = document.getElementById("p1");
-        if (e.currentTarget.value.toUpperCase()=="JAVASCRIPT") {
+        if (e.currentTarget.value=="JavaScript") {
             divP1.innerHTML="Respuesta Correcta";
         }else{
-            divP1.innerHTML="Respuesta Incorrecta. Correcta es :milú."
+            divP1.innerHTML="Respuesta Incorrecta. La solución es JavaScript";
         }
     }else if (e.currentTarget.name=='age') {
         divP2=document.getElementById("p2");
         if (e.currentTarget.value=="25") {
             divP2.innerHTML="Respuesta Correcta"
         }else{
-            divP2.innerHTML = "Respuesta incorrecta. Correcta es blanco"
+            divP2.innerHTML = "Respuesta incorrecta. La respuesta correcta es 18-24";
         }
     }
 }
