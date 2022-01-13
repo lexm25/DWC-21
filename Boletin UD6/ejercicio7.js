@@ -18,6 +18,9 @@ function iniciar() {
         }
         tabla.appendChild(tr);
     }
-
     document.body.appendChild(tabla);
+    var enlace = document.createElement('a');
+    var textEnlace = document.createTextNode('Pulsa aquí');
+    enlace.appendChild(textEnlace);
+    document.body.appendChild(enlace);
 }
