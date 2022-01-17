@@ -1,8 +1,8 @@
 //inicializamos el registrador de eventos a la función iniciar
-window.addEventListener("load",iniciar)
+window.addEventListener("load",iniciar);
 
 function iniciar(){
-    body();
+    desplegableTitulo();
 }
 
 function body() {
@@ -27,8 +27,6 @@ function body() {
         var img = document.createElement("img");
         img.setAttribute("src",arrayJuguetes[i]["img"]);
         img.setAttribute("title",arrayJuguetes[i]["title"]);
-
-        img.addEventListener('click', ocultarMostrar);
         
         var div3 = document.createElement("div");
         div3.setAttribute("class","desc");
@@ -59,18 +57,45 @@ function body() {
 
         //añadimos el div principal a el body
         document.body.appendChild(div);
-
-        //definimos la función para mostrar/ocultar
-        
-        
-        
     }
-    function ocultarMostrar(){
-        if (div3.style.display=="none") {
-            div3.style.display="";
-        } else{
-            div3.style.display="none";
-        }
-    }  
+}
+
+ //definimos la función para mostrar/ocultar 
+ function desplegableTitulo(){
+    var titulo = document.getElementsByTagName('h1');
+
+    for (let i = 0; i<titulo.length; i++){
+        titulo[i].addEventListener('click', ocultarMostrarTitulo);
+    }
+}
+function desplegable(){
+    var fotos = document.getElementsByTagName('img');
+
+    for (let z = 0; z<fotos.length; z++){
+        fotos[z].addEventListener('click', ocultarMostrar);
+    }
+}
+function ocultarMostrar(){
+    
+    if (this.nextSibling.style.display=="none") {
+        visible="";
+    } else{
+        visible="none";
+    }
+
+    var padre = this.parentNode;
+    var arrayHijos = padre.childNodes;
+    for(let z= 1; z<arrayHijos.length; z++){
+        arrayHijos[z].style.display=visible;
+    }
+}
+function ocultarMostrarTitulo(){
+    var ocultar=document.getElementsByTagName('div');
+    if (ocultar[0]==undefined) {
+        body();
+        desplegable();
+    }else{
+        ocultar[0].remove();
+    }
 }
 
