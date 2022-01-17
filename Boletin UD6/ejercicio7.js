@@ -1,26 +1,46 @@
-window.addEventListener("load",iniciar);
+window.addEventListener("load",inicio)
 
-function iniciar() {
-    var tabla = document.createElement('table');
-    var tr = document.createElement('tr');
+//añadir el mostrar y el ocultar.
+function inicio(){
+    var enlace = document.createElement('a');
+    enlace.setAttribute("id","mostrarOcultar");
+    //enlace.setAttribute("href","ejercicio7.html");
 
-    tabla.setAttribute("border","1");
-
-    for (let i = 0; i < 20 ; i++) {
-        var tr = document.createElement('tr');
-
-        for (let i = 0; i < 20; i++) {
-            var columna = document.createElement('td');
-            var txt = document.createTextNode('000');
+    var txt1 = document.createTextNode("Ocultar/Mostrar");
+    enlace.appendChild(txt1);
+    var div = document.createElement('div');
+    div.appendChild(enlace);
+    document.body.appendChild(div);
     
-            columna.appendChild(txt);
-            tr.appendChild(columna);
-        }
-        tabla.appendChild(tr);
+    var elemento1 = document.getElementById("mostrarOcultar");
+    elemento1.addEventListener("click",mostrarOcultar);
+}
+
+function mostrarOcultar(){
+    var tabla=document.getElementsByTagName('table')
+    if (tabla[0]==undefined) {
+        mostrar();
+    }else{
+        tabla[0].remove();
+    }
+}
+
+function mostrar() {
+
+    var tabla = document.createElement('table');
+    for (let i = 0; i < 20; i++) {
+        var fila = document.createElement('tr');
+        for (let z = 0; z < 20; z++) {
+            var columna = document.createElement('td');
+            var contenido=document.createTextNode("Columna: "+z+" Fila: "+i)
+            
+            columna.appendChild(contenido);
+            fila.appendChild(columna);
+        }   
+        tabla.appendChild(fila);
     }
     document.body.appendChild(tabla);
-    var enlace = document.createElement('a');
-    var textEnlace = document.createTextNode('Pulsa aquí');
-    enlace.appendChild(textEnlace);
-    document.body.appendChild(enlace);
+    tabla.setAttribute("border","1px");
+
+
 }
