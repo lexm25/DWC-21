@@ -30,7 +30,7 @@
         var fecha = (document.forms["formulario"].fecha.value).toUpperCase();
 
         if(password1 != password2){
-
+            document.getElementById('errorContrasenya').value = "Error";
         }else{
             nuevaVentana = window.open("","","height=400,width=800");
             nuevaVentana.document.write("Nombre: " + nombre + "<br>");

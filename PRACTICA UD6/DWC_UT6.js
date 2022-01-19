@@ -17,8 +17,6 @@ function cuerpo() {
     ul.setAttribute("style","list-style-type:none;");
     div.appendChild(ul);
 
-    
-    // h1.firstChild.nodeValue
     //creamos el bucle con el li y sus componentes
     for (let i = 0; i < arrayJuguetes.length; i++) {
         var li = document.createElement("li");
@@ -62,7 +60,6 @@ function cuerpo() {
 
         //añadimos el div principal a el body
         document.body.appendChild(div);
-
     }
 }
 
@@ -83,7 +80,6 @@ function mostrar() {
         cuerpo();
         document.getElementsByTagName('h1')[0].firstChild.nodeValue = "OCULTAR JUGUETES";
     }
-    
 }
 
 
