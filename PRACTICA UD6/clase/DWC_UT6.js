@@ -4,7 +4,6 @@ window.addEventListener("load",iniciar)
 function iniciar(){
     var h1 = document.getElementsByTagName("h1")[0];
     h1.addEventListener("click",mostrar);
-    
 }
 
 function cuerpo() {
@@ -81,5 +80,3 @@ function mostrar() {
         document.getElementsByTagName('h1')[0].firstChild.nodeValue = "OCULTAR JUGUETES";
     }
 }
-
-
