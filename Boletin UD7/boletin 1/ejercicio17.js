@@ -1,0 +1,14 @@
+$(document).ready(function(){
+  $("#primero").click(function(){
+    alert($("div").text());
+  });
+  $("#segundo").click(function(){
+    alert($("div").html());
+  });
+  $("#tercero").click(function(){
+    alert($("input").val());
+  });
+  $("#cuarto").click(function(){
+    alert($("a").text());
+  });
+});
