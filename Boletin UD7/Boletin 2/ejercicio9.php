@@ -1,4 +1,4 @@
 <?php
-    $cadena = "hola mundo";
-    echo json_encode($cadena);
+    $cadena = '{"nombre":"juan"}';
+    echo($cadena);
 ?>
