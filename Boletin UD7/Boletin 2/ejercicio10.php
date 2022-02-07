@@ -1,4 +1,5 @@
 <?php
-    $muestra = $_POST['nombre'] . $_POST['edad'];
-    var_dump($muestra);
+    $nombre = $_POST["nombre"];
+    $edad = $_POST["edad"];
+    echo $nombre . " " . $edad;
 ?>

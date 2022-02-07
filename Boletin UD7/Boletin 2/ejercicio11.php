@@ -1,3 +1,6 @@
 <?php
-    var_dump($_POST);
+   $nombre = $_POST["nombre"];
+   $edad = $_POST["edad"];
+   
+   echo $nombre . " " . $edad; 
 ?>
